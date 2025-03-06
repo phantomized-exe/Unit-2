@@ -38,7 +38,7 @@ def main():
     restaurant1 = Restaurant("restaurant","food")
     restaurant1.__init__("restaurant","food")
     restaurant1.describe_restaurant()
-    Restaurant.open_restaurant()
+    restaurant1.open_restaurant()
     sushi = Restaurant("Bing's Sushi","sushi")
     burgers = Restaurant("Robby's Burgers","burgers")
     pizza = Restaurant("Pete's Pizza","pizza")
