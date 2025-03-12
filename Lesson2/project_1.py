@@ -16,9 +16,9 @@ class Costco:
         self.price = price
         self.quantity = quantity
         self.total = total
-        food_list = ["Hotdog","Pizza","Chicken Bake","Chicken Salad","Roast Beef Sandwich","Ice Cream","Smoothie","Soda"]
+        food_list = ["Hotdog","Pizza","Chicken Bake","Chicken Salad","Cookie","Ice Cream","Smoothie","Soda"]
         self.food_list = food_list
-        price_list = [1.50,1.99,3.99,6.99,9.99,1.99,2.99,0.69]
+        price_list = [1.50,1.99,3.99,6.99,2.49,1.99,2.99,0.69]
         self.price_list = price_list
         for i in range(len(food_list)):
             food_dictionary[food_list[i]] = price_list[i]
@@ -28,7 +28,7 @@ class Costco:
         """prints the menu for the user to see
         """
         print("Here is the menu:\n1. Hotdog $1.50\n2. Pizza $1.99"
-        "\n3. Chicken Bake $3.99\n4. Chicken Salad $6.99\n5. Roast Beef Sandwich $9.99"
+        "\n3. Chicken Bake $3.99\n4. Chicken Salad $6.99\n5. Cookie $2.49"
         "\n6. Ice Cream $1.99\n7. Smoothie $2.99\n8. Soda $0.69\n9. Finish and pay")
         return
     def food_name(self) -> None:
@@ -69,6 +69,7 @@ class Costco:
     def get_price(self) -> None:
         """gets the price by adding up all the food currently being ordered
         """
+        self.total = 0
         for i in range(len(self.buy_list)):
             self.total += self.food_dictionary[self.buy_list[i]]
         print(f"Your total is ${self.total:.2f}")
