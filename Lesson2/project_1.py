@@ -25,11 +25,15 @@ class Costco:
         self.food_dictionary = food_dictionary
         self.buy_list = buy_list
     def menu(self) -> None:
+        """prints the menu for the user to see
+        """
         print("Here is the menu:\n1. Hotdog $1.50\n2. Pizza $1.99"
         "\n3. Chicken Bake $3.99\n4. Chicken Salad $6.99\n5. Roast Beef Sandwich $9.99"
         "\n6. Ice Cream $1.99\n7. Smoothie $2.99\n8. Soda $0.69\n9. Finish and pay")
         return
     def food_name(self) -> None:
+        """takes the user's order by asking for the food number that corresponds to the food item
+        """
         while True:
             food_num = input("Enter the food number or type menu: ")
             if food_num == "menu":
@@ -56,18 +60,21 @@ class Costco:
                 self.get_quantity()
                 break
     def get_quantity(self) -> None:
-        """
-        adds the food item to the list for each quantity the user wants
+        """adds the food item to the list for each quantity the user wants
         """
         self.quantity = int(input(f"Enter the quantity for {self.name}: "))
         for i in range(self.quantity):
             self.buy_list.append(self.name)
         self.get_price()
     def get_price(self) -> None:
+        """gets the price by adding up all the food currently being ordered
+        """
         for i in range(len(self.buy_list)):
             self.total += self.food_dictionary[self.buy_list[i]]
         print(f"Your total is ${self.total:.2f}")
     def get_receipt(self):
+        """prints the formatted receipt for the user, showing the items they bought, the price of those items, and the total price
+        """
         print()
         print("Thank you for shopping at Costco\n--------------------------------")
         print("Items:                   Price:")
