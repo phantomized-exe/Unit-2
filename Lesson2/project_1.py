@@ -73,7 +73,7 @@ class Costco:
         for i in range(len(self.buy_list)):
             self.total += self.food_dictionary[self.buy_list[i]]
         print(f"Your total is ${self.total:.2f}")
-    def get_receipt(self):
+    def get_receipt(self) -> None:
         """prints the formatted receipt for the user, showing the items they bought, the price of those items, and the total price
         """
         print()
