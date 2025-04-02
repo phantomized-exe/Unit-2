@@ -45,7 +45,6 @@ def main():
     my_leaf = ElectricCar("Nissan","Leaf",2024,60)
     print(my_leaf.battery_capacity)
     print(my_leaf.make)
-    print(my_leaf.fil)
 
 
 if __name__ == '__main__':
